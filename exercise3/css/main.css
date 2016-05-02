@@ -567,14 +567,15 @@ section {
 
 #company-information .inner-container {
 	font-size: 0;
+	padding: 0 16px;
 }
 
 #company-information .inner-container .information-inner-container {
-	width: 313px;
+	width: 324px;
 	height: 100%;
 	display: inline-block;
 	vertical-align: top;
-	margin: 0 35px;
+	margin: 0 24px;
 }
 
 #company-information .inner-container .information-inner-container h5 {
