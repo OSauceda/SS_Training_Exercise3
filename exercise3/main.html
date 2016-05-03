@@ -4,6 +4,8 @@
 	<title>Main</title>
 	<link rel="stylesheet" href="./css/main.css">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/utilities.css">
 	<!-- font awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
@@ -18,12 +20,12 @@
 				<li><a href="">Contact Us</a></li>
 			</ul>
 			<img src="./img/switch.png" alt="">
-			<input type="text" value="Search...">
+			<input type="text" value="Search..." id="search-box">
 		</nav>
 		<h1>Art is Eternal Happiness</h1>
 		<a href="" class="btn-stnd btn-work-with-us center-element">WORK WITH US</a>
 		
-		<a href="" class="btn-stnd btn-scroll center-element">scroll down&nbsp;&nbsp;&nbsp;&nbsp<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+		<a href="" class="btn-stnd btn-scroll center-element">scroll down&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
 	</div>	<!-- inner-container -->
 	</header> <!-- header -->
 
@@ -132,9 +134,9 @@
 					<div class="vertical-line center-element"></div>
 					<h6>Krisna Wijaya</h6>
 					<div class="social-media-container center-element">
-						<img src="./img/dribbble.png" alt="">
-						<img src="./img/be.png" alt="">
-						<img src="./img/twitter.png" alt="">
+						<a href=""><img src="./img/dribbble.png" alt=""></a>
+						<a href=""><img src="./img/be.png" alt=""></a>
+						<a href=""><img src="./img/twitter.png" alt=""></a>
 					</div> <!-- social media container -->
 				</div> <!-- team member profile -->
 
@@ -143,9 +145,9 @@
 					<div class="vertical-line center-element"></div>
 					<h6>Gabriel Yoshua</h6>
 					<div class="social-media-container center-element">
-						<img src="./img/dribbble.png" alt="">
-						<img src="./img/be.png" alt="">
-						<img src="./img/twitter.png" alt="">
+						<a href=""><img src="./img/dribbble.png" alt=""></a>
+						<a href=""><img src="./img/be.png" alt=""></a>
+						<a href=""><img src="./img/twitter.png" alt=""></a>
 					</div> <!-- social media container -->
 				</div> <!-- team member profile -->
 
@@ -154,9 +156,9 @@
 					<div class="vertical-line center-element"></div>
 					<h6>Adik N.K.L</h6>
 					<div class="social-media-container center-element">
-						<img src="./img/dribbble.png" alt="">
-						<img src="./img/be.png" alt="">
-						<img src="./img/twitter.png" alt="">
+						<a href=""><img src="./img/dribbble.png" alt=""></a>
+						<a href=""><img src="./img/be.png" alt=""></a>
+						<a href=""><img src="./img/twitter.png" alt=""></a>
 					</div> <!-- social media container -->
 				</div> <!-- team member profile -->
 
@@ -165,9 +167,9 @@
 					<div class="vertical-line center-element"></div>
 					<h6>Zan D.J</h6>
 					<div class="social-media-container center-element">
-						<img src="./img/dribbble.png" alt="">
-						<img src="./img/be.png" alt="">
-						<img src="./img/twitter.png" alt="">
+						<a href=""><img src="./img/dribbble.png" alt=""></a>
+						<a href=""><img src="./img/be.png" alt=""></a>
+						<a href=""><img src="./img/twitter.png" alt=""></a>
 					</div> <!-- social media container -->
 				</div> <!-- team member profile -->
 
@@ -176,9 +178,9 @@
 					<div class="vertical-line center-element"></div>
 					<h6>Faizal Febri</h6>
 					<div class="social-media-container center-element">
-						<img src="./img/dribbble.png" alt="">
-						<img src="./img/be.png" alt="">
-						<img src="./img/twitter.png" alt="">
+						<a href=""><img src="./img/dribbble.png" alt=""></a>
+						<a href=""><img src="./img/be.png" alt=""></a>
+						<a href=""><img src="./img/twitter.png" alt=""></a>
 					</div> <!-- social media container -->
 				</div> <!-- team member profile -->
 				
@@ -197,9 +199,9 @@
 				<p>	This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Ut aliquam massa nisl quis neque. Suspendisse in orci enim.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.</p>
 
 				<div class="social-media-container center-element">
-					<img src="./img/dribbble.png" alt="">
-					<img src="./img/facebook.png" alt="">
-					<img src="./img/twitter.png" alt="">
+					<a href=""><img src="./img/dribbble.png" alt=""></a>
+					<a href=""><img src="./img/facebook.png" alt=""></a>
+					<a href=""><img src="./img/twitter.png" alt=""></a>
 				</div> <!-- social media container -->
 
 			</div> <!-- information inner container -->
@@ -253,13 +255,25 @@
 				<div><h6>Email:&nbsp;</h6><a href="">Username@email.com</a></div>
 				<div><h6>Phone:&nbsp;</h6><a href="">+1 (0) 123 4567 890</a></div>
 				<div><h6>Fax:&nbsp;</h6><a href="">+1 (0) 321 4567 890</a></div>
-			</div> <!-- information inner container -->
 
+				<div class="contact-form-container">
+					<input type="text" value="Your Name.." id="input-name">
+					<input type="text" value="Your Email.." id="input-email">
+					<textarea id="input-message" cols="35" rows="5">Your Message..</textarea>
+					<input type="submit" value="SEND" id="submit-send">
+				</div> <!-- contact form container -->
+			</div> <!-- information inner container -->
 		</div> <!-- inner-container -->
 
 	</section> <!-- company-information -->
 
 	<footer>
 	</footer> <!-- footer -->
+	<div id="made-by" class="center-text">
+		<div class="inner-container center-element">
+			<h5>Made by Oscar</h5>
+		</div>
+	</div>
+	<script src="./js/main.js"></script>
 </body>
 </html>

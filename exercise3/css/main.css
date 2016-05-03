@@ -1,49 +1,6 @@
-body{
-	margin: 0;
-	padding: 0;
-	background-color: #ffffff;
-	color: #ffffff;
-	font-family: 'Montserrat', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-	margin: 0;
-	padding: 0;
-}
-
-.center-element {
-	margin: 0 auto;
-}
-
-.center-text {
-	text-align: center;
-}
-
 .inner-container {
 	width: 1170px;
 	height: 100%;
-}
-
-.border-left {
-	border-top-left-radius: 20px !important;
-	border-bottom-left-radius: 20px !important;
-}
-
-.border-right {
-	border-top-right-radius: 20px !important;
-	border-bottom-right-radius: 20px !important;
-}
-
-.btn-stnd {
-	border-radius: 20px;
-	text-decoration: none;
-	color: #ffffff;
-	display: block;
-}
-
-a:hover {
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 .horizontal-line {
@@ -75,8 +32,11 @@ a:hover {
 header {
 	height: 660px;
 	width: 100%;
-	background: url("../img/background.png") no-repeat center center;
-	//background-size: 100% auto;
+	background: url("../img/background.png") no-repeat center center; 
+ 	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
 }
 
 header nav {
@@ -653,12 +613,12 @@ section {
 }
 
 #contact-us p {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 300;
 }
 
 #contact-us h6 {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 300;
 	display: inline-block;
 	vertical-align: top;
@@ -666,14 +626,71 @@ section {
 
 #contact-us a {
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 300;
 	color: #aeaeae;
 	display: inline-block;
 	vertical-align: top;
 }
 
+#contact-us .contact-form-container {
+	width: 100%;
+	height: 234px;
+	margin-top: 25px;
+}
+
+#contact-us .contact-form-container input[type=text] {
+	padding: 10px 145px 10px 15px;
+	font-size: 16px;
+	background-color: #444444;
+	border: none;
+	color: #777777;
+	margin-bottom: 2px;
+}
+
+#contact-us .contact-form-container input[type=submit] {
+	background-color: #2b9b2b;
+	color: #abd1ab;
+	font-size: 14px;
+	padding: 10px 145px;
+	border: 0;
+}
+
+#contact-us .contact-form-container input[type=submit]:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+#contact-us .contact-form-container textarea {
+	font-size: 16px;
+	background-color: #444444;
+	border: none;
+	color: #777777;
+	margin-bottom: 2px;
+	padding: 10px 16px 0 16px;
+}
+
+#input-name {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+#submit-send {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
 footer {
 	height: 148px;
-	background: url("../img/footerbackground.png") no-repeat center center;
+	background: #222222 url("../img/footerbackground.png") no-repeat center center;
+}
+
+#made-by {
+	width: 100%;
+	background-color: #222222;
+}
+
+#made-by .inner-container h5 {
+	font-size: 16px;
+	font-weight: 300;
 }
