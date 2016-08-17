@@ -99,9 +99,9 @@ $(document).ready(function(){
 		$(this).addClass("selected");
 
 		if ($(this).index()==btnWorkType[0]){
-			$(".gallery-element").fadeIn(1000);
+			$(".gallery-element").fadeIn();
 		} else {
-			$(".gallery-element").fadeOut(1000);	
+			$(".gallery-element").fadeOut();	
 		}
 	});//END TOGGLES THE CLASS "SELECTED"
 
@@ -153,7 +153,21 @@ $(document).ready(function(){
 			content: 'Esto es una prueba.'
 		});
 	});*/
-	$('.btn-learn-more').modalPlugin().css('color','blue');
 
+	$.ajax({
+		url: '/modal.html',
+		type: 'GET',
+		data: {},
+		success: function (r) {
+			$('.btn-learn-more').modalPlugin({
+				title: 'ESTA ES OTRA PRUEBA',
+				content: r
+			}).css('color','blue');
+		}
+	});
+/*			$('.btn-learn-more').modalPlugin({
+				title: 'ESTA ES OTRA PRUEBA',
+				content: 'grerererereereer'
+			}).css('color','blue');*/
 });
 
