@@ -1,13 +1,13 @@
 (function($){
 
-	modalPlugin = function(){
+	var modalPlugin = function(){
 
 		this.$modalOverlay = $('<div></div>');
 		this.$modalWindow = $('<div></div>');
 		this.$modalCloseBtn = $('<a></a>');
 		this.$modalCloseBtnImg = $('<i></i>');
 		this.$modalTitle = $('<h2></h2>');
-		this.$modalContent = $('<p></p>');
+		this.$modalContent = '';
 		this.$body = $('body');	
 
 	};
@@ -27,14 +27,14 @@
 	modalPlugin.prototype.close = function(){
 
 		var overlay = this.$modalOverlay;
-		var objectOwner = this;
+		var self = this;
 
 		//We add an event listener to the modal closing button
 		this.$modalCloseBtn.on('click',function(e){
 
 			e.preventDefault();
 			overlay.remove();
-			objectOwner.scroll();
+			self.scroll();
 		});	
 
 	};
@@ -43,7 +43,7 @@
 
 		var overlay = this.$modalOverlay;
 		var body = this.$body;
-		var objectOwner = this;
+		var self = this;
 
 		//Listener event for escape key
 		$(document).keyup(function(e) {
@@ -53,7 +53,7 @@
 				//We are only going to remove the modal if it exists on the DOM
 				if (body.find(overlay).length>0) {
 					overlay.remove();
-					objectOwner.scroll();
+					self.scroll();
 				}
 			}
 		});			
@@ -74,9 +74,9 @@
 		}
 
 		if (param.content && param.content.length > 0) {
-			this.$modalContent.html(param.content);
+			this.$modalContent=$(param.content);
 		} else {
-			this.$modalContent.html('');
+			this.$modalContent='';
 		}			
 
 		this.assemble();
@@ -96,7 +96,7 @@
 		},modalContent);		
 			
 		var lightbox = new modalPlugin();
-		console.log(lightbox);
+
 		this.off('click').click(function(e){
 
 			e.preventDefault();

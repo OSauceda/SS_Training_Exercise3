@@ -842,7 +842,7 @@ footer .inner-container {
 .popUpContainer {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.7);
 	position: fixed;
 	z-index: 100;
 	top: 0;
@@ -868,11 +868,16 @@ footer .inner-container {
 }
 
 .popUpContainer .popUpWindow h2{
-	margin: 20% 0 5% 0;
+	margin: 5% 0 5% 0;
 }
 
 .popUpContainer .popUpWindow p {
-	padding: 0 6%;
+	padding: 0 4%;
+}
+
+.popUpContainer .popUpWindow .content {
+	height: 70%;
+	overflow: auto;
 }
 
 .popUpContainer .popUpWindow a {

@@ -160,7 +160,7 @@ $(document).ready(function(){
 		data: {},
 		success: function (r) {
 			$('.btn-learn-more').modalPlugin({
-				title: 'ESTA ES OTRA PRUEBA',
+				title: 'Ajax',
 				content: r
 			}).css('color','blue');
 		}
